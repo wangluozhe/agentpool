@@ -21,7 +21,7 @@
 2.初次获取的代理分数均为10分
 3.每次测试代理后，测试成功将设置为最高分，测试失败将扣除1分
 
-### 使用uvloop
+### 使用uvloop（仅Linux）
 只需要在`ProxyDatabase/redisclient.py`和`ProxyTester/tester.py`文件中加入以下代码即可
 ```python
 import uvloop
