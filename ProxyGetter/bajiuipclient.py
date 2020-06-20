@@ -22,7 +22,6 @@ class BaJiuIPClient(object):
         }
         self.pages = pages
         self.db = DBClient()
-        print(self.db)
         for page in range(1,self.pages+1):
             self.fetch_proxy(page)
             time.sleep(5)
