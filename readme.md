@@ -21,6 +21,12 @@
 2.初次获取的代理分数均为10分
 3.每次测试代理后，测试成功将设置为最高分，测试失败将扣除1分
 
+### 使用uvloop
+只需要在`ProxyDatabase/redisclient.py`和`ProxyTester/tester.py`文件中加入以下代码即可
+```python
+import uvloop
+asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+```
 
 ### 代理池框架
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200523145554683.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMjc5MDc3,size_16,color_FFFFFF,t_70#pic_center)
